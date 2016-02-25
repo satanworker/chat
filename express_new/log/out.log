@@ -1,0 +1,52 @@
+server started
+sb
+[0mGET /subscribe [0m- [0m- ms - -[0m
+[0mGET / [32m200 [0m341.146 ms - 281[0m
+[0mGET /stylesheets/style.css [36m304 [0m9.949 ms - -[0m
+[0mGET /js/chat.js [36m304 [0m0.655 ms - -[0m
+sb
+[0mGET /subscribe [0m- [0m- ms - -[0m
+[0mGET / [32m200 [0m25.108 ms - 281[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.554 ms - -[0m
+[0mGET /js/chat.js [36m304 [0m0.365 ms - -[0m
+sb
+[0mGET /subscribe [0m- [0m- ms - -[0m
+[0mGET / [32m200 [0m13.336 ms - 281[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.367 ms - -[0m
+[0mGET /js/chat.js [36m304 [0m0.262 ms - -[0m
+sb
+pb
+[0mGET /subscribe [32m200 [0m1599.671 ms - -[0m
+[0mPOST /publish [32m200 [0m5.558 ms - -[0m
+sb
+pb
+[0mGET /subscribe [32m200 [0m2099.056 ms - -[0m
+[0mPOST /publish [32m200 [0m2.361 ms - -[0m
+sb
+pb
+[0mGET /subscribe [32m200 [0m590.387 ms - -[0m
+[0mPOST /publish [32m200 [0m1.693 ms - -[0m
+sb
+detected 10
+pb
+[0mGET /subscribe [32m200 [0m1963.731 ms - -[0m
+[0mPOST /publish [32m200 [0m5.251 ms - -[0m
+sb
+pb
+[0mGET /subscribe [32m200 [0m1060.482 ms - -[0m
+[0mPOST /publish [32m200 [0m1.660 ms - -[0m
+sb
+[0mGET /subscribe [0m- [0m- ms - -[0m
+[0mGET / [32m200 [0m28.839 ms - 281[0m
+[0mGET /stylesheets/style.css [36m304 [0m0.589 ms - -[0m
+[0mGET /js/chat.js [36m304 [0m0.273 ms - -[0m
+sb
+pb
+[0mGET /subscribe [32m200 [0m1626.065 ms - -[0m
+[0mPOST /publish [32m200 [0m1.265 ms - -[0m
+sb
+pb
+[0mGET /subscribe [32m200 [0m875.510 ms - -[0m
+[0mPOST /publish [32m200 [0m1.125 ms - -[0m
+sb
+[0mGET /subscribe [0m- [0m- ms - -[0m

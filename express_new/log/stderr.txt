@@ -1,0 +1,2 @@
+Thu, 25 Feb 2016 12:02:04 GMT express-session deprecated undefined resave option; provide resave option at server.js:32:9
+Thu, 25 Feb 2016 12:02:04 GMT express-session deprecated undefined saveUninitialized option; provide saveUninitialized option at server.js:32:9

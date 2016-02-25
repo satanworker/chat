@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     subscribe();
 
     function subscribe() {
+        console.log('rsub');
         var xhr = new XMLHttpRequest();
 
         xhr.open('GET', '/subscribe', true);
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         xhr.setRequestHeader("Content-type","text/plain");
 
         xhr.onload = function() {
+            console.log('response text', this.responseText);
             var li = document.createElement('li');
             li.textContent = this.responseText;
 

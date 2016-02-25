@@ -5,18 +5,20 @@ var fs = require('fs');
 //db
 var db;
 var sessions;
-
+var sub_res;
 /* GET home page. */
 router.get('/', function(req, res, next) {
   db = req.db;
   sessions  = db.get('session');
   var sessId = req.sessionID;
-  sessions.insert({
-    "sessId": sessId,
-    "allowed": false
-  });
-  sessions.find({}, {}, function(err, data) {
-    console.log(data);
+  //db insert session
+  sessions.find({"sessId": sessId}, {}, function(err, data) {
+    if(!data.length) {
+      sessions.insert({
+        "sessId": sessId,
+        "allowed": false
+      });
+    }
   });
   res.render('index', { title: 'Express' });
 });
@@ -33,12 +35,12 @@ router.get('/test', function(req, res, next) {
 router.get('/subscribe', function(req, res, next) {
   var clients_ar = [];
   db = req.db;
+  sub_res = res;
   sessions  = db.get('session');
-  sessions.find( {'allowed': true}, {}, function(e, docs) {
-      for(var d = 0; d < docs.length; d++) {
-        clients_ar.push(docs[d].sessId);
-      }
-    chat.subscribe(req, res, clients_ar);
+  sessions.find( {'allowed': true, 'sessId': req.sessionID}, {}, function(e, data) {
+    if(data.length) {
+      chat.subscribe(req, res);
+    }
   });
 });
 
@@ -69,10 +71,11 @@ router.post('/publish', function(req, res, next) {
           }
       );
 
+      sub_res.end('10')
     }
-    chat.publish(body.message);
 
-    res.end('ok')
+    chat.publish(body.message);
+    res.end('ok');
   });
 });
 
