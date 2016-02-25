@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
       });
     }
   });
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Чат заебись на ноде четко!!', img_src: '/img/ass.jpg' });
 });
 
 router.get('/test', function(req, res, next) {
@@ -73,8 +73,11 @@ router.post('/publish', function(req, res, next) {
 
       sub_res.end('10')
     }
-
-    chat.publish(body.message);
+    sessions.find( {'allowed': true, 'sessId': req.sessionID}, {}, function(e, data) {
+      if(data.length) {
+        chat.publish(body.message);
+      }
+    });
     res.end('ok');
   });
 });

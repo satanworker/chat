@@ -6,6 +6,7 @@ exports.subscribe = function(req, res) {
 exports.publish = function(message) {
     console.log('PUBLISHH');
     clients.forEach(function (res){
+
         res.end(message);
     });
     clients = [];
