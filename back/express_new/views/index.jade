@@ -1,0 +1,14 @@
+extends layout
+block content
+    p= title
+    form#authorize
+        input#name(name="name" placeholder="Nickname dick")
+        input(type="submit" value="Go")
+    img(src=img_src)
+    ul#messages
+    form#publish
+        span.typing
+        input#message
+        input(type="submit" value="отправить")
+    div.sdsd#id(data-id="1212")
+        p.paragraph
